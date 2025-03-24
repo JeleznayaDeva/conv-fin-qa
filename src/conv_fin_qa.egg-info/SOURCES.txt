@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+src/conv_fin_qa.egg-info/PKG-INFO
+src/conv_fin_qa.egg-info/SOURCES.txt
+src/conv_fin_qa.egg-info/dependency_links.txt
+src/conv_fin_qa.egg-info/namespace_packages.txt
+src/conv_fin_qa.egg-info/requires.txt
+src/conv_fin_qa.egg-info/top_level.txt
+src/conv_fin_qa.egg-info/zip-safe

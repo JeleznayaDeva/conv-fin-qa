@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: conv-fin-qa
+Version: 0.1.dev0
+Summary: Prototype for financial question answering using Mistral and OpenAI's GPT-3.5
+Home-page: 
+Author: Firuza Mamedova
+Author-email: firuza.mamedova@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Requires-Dist: llama-cpp-python>=0.3.8
+Requires-Dist: Pyyaml>=5.1.2
+
+# Create and activate environment
+
+```shell script
+conda create -p <path_of_this_project>/env python=3.8
+conda activate <path_of_this_project>/env
+```
+
+Install the python dependencies
+
+```shell script
+pip install -r requirements.txt
+pip install -e ./
+```

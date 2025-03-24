@@ -1,0 +1,8 @@
+
+import os
+
+CLIENTS_PATH = os.getenv("CLIENTS_PATH")
+MODEL_PATH = os.getenv("MODEL_PATH")
+DATA_PATH = os.getenv("DATA_PATH")
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+PREPROCESSED_DATA_PATH = os.getenv("PREPROCESSED_DATA_PATH")
