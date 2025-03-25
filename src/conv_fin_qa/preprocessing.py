@@ -47,18 +47,21 @@ class DataHandler:
             )
         return pretty_table_str
 
-    def format_context(self, tables_only: bool = True) -> str:
+    def format_context(self, tables_structured: bool = False) -> str:
         """Get formatted context of the document."""
-        table = self.document["table"]
-        if not tables_only:
-            pre_text_list = self.document["pre_text"] if not isinstance(self.document["pre_text"], str) else [self.document["pre_text"]]
-            post_text_list = self.document["post_text"] if not isinstance(self.document["post_text"], str) else [self.document["post_text"]]
-            pre_text = "\n".join(pre_text_list) + "\n"
-            post_text = "\n".join(post_text_list) + "\n"
-        else:
-            pre_text = ""
-            post_text = ""
-        table_str = self.pretty_table(table)
+        pre_text_list = self.document["pre_text"] if not isinstance(
+            self.document["pre_text"], str
+        ) else [self.document["pre_text"]]
+        post_text_list = self.document["post_text"] if not isinstance(
+            self.document["post_text"], str
+        ) else [self.document["post_text"]]
+        pre_text = "\n".join(pre_text_list) + "\n"
+        post_text = "\n".join(post_text_list) + "\n"
+        table_str = (
+            self.pretty_table(self.document["table"])
+            if tables_structured
+            else "\n".join("|".join(cell for cell in row) for row in self.document["table"])
+        )
 
         return f"{pre_text}{table_str}{post_text}"
 

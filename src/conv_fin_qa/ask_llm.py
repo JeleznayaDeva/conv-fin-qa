@@ -1,24 +1,16 @@
 import time
 
-from enum import Enum
-
 from .llm_clients import DeepSeekClient, MistralClient
 
 
-class UsageMode(Enum):
-    USER = 0
-    EVALUATION = 1
-    TRAINING = 2
-
-
-def ask_financial_question(context: str, question, model: str = "deepseek"):
+def ask_financial_question(context: str, question, mode: str = "deepseek"):
     """Ask a financial question using the specified model."""
-    if model == "deepseek":
+    if mode == "deepseek":
         client = DeepSeekClient()
-    elif model == "mistral":
+    elif mode == "mistral":
         client = MistralClient()
     else:
-        raise ValueError(f"Model {model} not supported")
+        raise ValueError(f"Mode {mode} not supported")
 
     start_time = time.time()
     response = client.get_response(

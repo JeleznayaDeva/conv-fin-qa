@@ -41,6 +41,6 @@ setup(
     dependency_links=[],
     zip_safe=True,
     keywords="",
-    python_requires=">=3.8",
+    python_requires=">=3.10",
     obsoletes=[],
 )

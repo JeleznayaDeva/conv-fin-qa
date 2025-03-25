@@ -1,11 +1,21 @@
 import json
+from argparse import ArgumentParser
 from pathlib import Path
+
 from conv_fin_qa.ask_llm import ask_financial_question
 from conv_fin_qa.preprocessing import DataHandler
 from conv_fin_qa.settings import PREPROCESSED_DATA_PATH
 
+parser = ArgumentParser()
+parser.add_argument(
+    "--mode",
+    help="Which model to use for answering the question",
+    default="deepseek",
+)
+args = parser.parse_args()
 
-def main():
+
+def main(mode: str = "deepseek"):
     """Main function to run the project as a module."""
     # Load the preprocessed data
     try:
@@ -28,8 +38,8 @@ def main():
         question = input("Please enter a valid question: ")
 
     # Generate the response
-    ask_financial_question(context=context, question=question)
+    ask_financial_question(context=context, question=question, mode=mode)
 
 
 if __name__ == "__main__":
-    main()
+    main(args.mode)

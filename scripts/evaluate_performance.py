@@ -18,7 +18,7 @@ if __name__ == "__main__":
         preprocess_data(data_path=DATA_PATH)
 
     # Evaluate the model's performance with context restricted to tables only
-    run_evaluation(tables_only=True)
+    run_evaluation(tables_structured=True, num_samples=100)
 
     # Evaluate the model's performance with full context
-    run_evaluation(tables_only=False)
+    run_evaluation(tables_structured=False, num_samples=100)
