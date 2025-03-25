@@ -9,10 +9,14 @@ This prototype demonstrates a dual-mode financial question-answering system usin
 The system employs a unified interface with automatic context formatting and flexible prompting. Evaluation using Exact Match (EM) with 5% tolerance ensures precise numerical accuracy while preventing hallucinations. Key challenges include multi-step reasoning errors and implicit temporal references, with future improvements focused on fine-tuning Mistral and integrating RAG for enhanced document retrieval.
 
 ## Key Features
-✅ Dual inference modes (DeepSeek/Mistral)  
+✅ Dual inference modes ([DeepSeek](https://platform.deepseek.com/) / [Mistral](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF))
+
 ✅ Common interface for both models
+
 ✅ Flexible prompting allowing to add more examples or update the prompts to address various types of questions.
+
 ✅ Automatic context formatting  
+
 ✅ Metric-driven performance analysis
 
 ## Implementation Approach
