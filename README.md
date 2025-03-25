@@ -78,12 +78,12 @@ wget https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/
 ### Cloud Mode (DeepSeek)
 ```bash
 export DEEPSEEK_API_KEY=your_key_here
-python -m conv_fin_qa --mode cloud
+python -m conv_fin_qa --mode deepseek
 ```
 
 ### Local Mode (Mistral CPU)
 ```bash
-python -m conv_fin_qa --mode local
+python -m conv_fin_qa --mode mistral
 ```
 
 Example session:
